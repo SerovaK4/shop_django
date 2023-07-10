@@ -81,6 +81,7 @@ def send_msg(request, pk):
 
     return redirect(reverse('blog:view', args=[pk]))
 
+
 def send_email(to_addr, subject, text):
     sender = 'galatsoktoeva@yandex.ru'
     sender_password = 'EuKH21t1!'
