@@ -3,7 +3,14 @@ from django import forms
 from catalog.models import Product, Version
 
 
-class ProductForm(forms.ModelForm):
+class StyleForMixin:
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] ='form-control'
+
+
+class ProductForm(StyleForMixin, forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args,**kwargs)
@@ -34,7 +41,7 @@ class ProductForm(forms.ModelForm):
         return cleaned_data
 
 
-class VersionForm(forms.ModelForm):
+class VersionForm(StyleForMixin, forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

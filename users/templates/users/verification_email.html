@@ -1,5 +1,7 @@
 {% block content %}
+
 {% csrf_token %}
+
 {% autoescape off %}
 {% csrf_token %}
 Привет, {{ user.username }}!
