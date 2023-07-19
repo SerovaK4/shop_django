@@ -1,18 +1,78 @@
 [
   {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "диван-кровать",
+      "description": "и диван, и кровать",
+      "img": "",
+      "category": 1,
+      "price": 60000,
+      "data_create": null,
+      "data_edit": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "обеденный стол",
+      "description": "обеденный на 6 персон",
+      "img": "",
+      "category": 2,
+      "price": 40000,
+      "data_create": null,
+      "data_edit": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "Телевизор",
+      "description": null,
+      "img": "",
+      "category": 1,
+      "price": 30000,
+      "data_create": null,
+      "data_edit": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "Шторы",
+      "description": null,
+      "img": "",
+      "category": 1,
+      "price": 10000,
+      "data_create": null,
+      "data_edit": null
+    }
+  },
+  {
     "model": "catalog.category",
     "pk": 1,
     "fields": {
-      "name": "Канцтовары",
-      "description": "изделия и принадлежности, используемые для переписки и оформления бумажной документации, учебы, творчества"
+      "name": "Гостинная",
+      "description": "Предметы комнатной обстановки"
     }
   },
   {
     "model": "catalog.category",
     "pk": 2,
     "fields": {
-      "name": "Напитки",
-      "description": "жидкость для питья"
+      "name": "Техника",
+      "description": "Средства труда"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "name": "Кухни",
+      "description": "Товары для обустройства кухни"
     }
   }
 ]
