@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.db import transaction
 from django.forms import inlineformset_factory
 from django.shortcuts import render
@@ -20,9 +21,9 @@ def contacts(request):
     return render(request, 'catalog/contacts.html', context)
 
 
+
 class ProductListView(ListView):
     model = Product
-
     template_name = 'catalog/product_list.html'
     extra_context = {
         'is_active_main': 'active'
@@ -44,6 +45,18 @@ class ProductListView(ListView):
             return queryset
         return queryset
 
+
+@login_required
+def contacts(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        message = request.POST.get('message')
+        print(f"{name}, {phone}: {message}")
+    context = {
+        'title': 'Контакты'
+    }
+    return render(request, 'catalog/contacts.html', context)
 
 class ProductDetailView(DetailView):
     model = Product
