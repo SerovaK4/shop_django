@@ -125,8 +125,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_FILES_DIRS = (
-    BASE_DIR / 'static'
+STATICFILES_DIRS = (
+    BASE_DIR / 'static',
 )
 
 # Default primary key field type
@@ -152,3 +152,5 @@ EMAIL_HOST_PASSWORD = 'shrxhzvhqsxmlblo'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 SERVER_EMAIL = EMAIL_HOST_USER
 EMAIL_ADMIN = EMAIL_HOST_USER
+
+LOGIN_URL = "/users/"
