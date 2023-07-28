@@ -47,7 +47,7 @@ class Version(models.Model):
     numbers = models.IntegerField(verbose_name="Номер версии")
     name = models.CharField(max_length=100, verbose_name='Название версии')
     description = models.CharField(max_length=150, verbose_name='Признак текущей версии', **NULLABLE)
-    is_current = models.BooleanField(default=True, **NULLABLE)
+    is_current = models.BooleanField(default=True, verbose_name='Актуальность', **NULLABLE)
 
     def __str__(self):
         return f'{self.name}'
